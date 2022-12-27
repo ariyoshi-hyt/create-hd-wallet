@@ -7,7 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello() {
+  createHdNode() {
     const mnemonic = ethers.Wallet.createRandom().mnemonic;
     const hdNode = ethers.utils.HDNode.fromMnemonic(mnemonic.phrase);
     const xprv = hdNode.extendedKey;
